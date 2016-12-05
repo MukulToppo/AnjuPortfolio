@@ -3,7 +3,7 @@ $(function()
 					footerNavigation();
 					iconReveal();
 				});
-				function footerNavigation()  <!-- Navigational script for the page in the footer section-->
+				function footerNavigation()  //Navigational script for the section below Landing section
 				{	$('.reveal').click(function()
 					{
 						$('html, body').animate({
@@ -12,7 +12,8 @@ $(function()
 
 					});
         }
-				function iconReveal()
+
+				function iconReveal()			//Reveal script to toggle icon hide and reveal
 				{
 					$('.hamburger').click(function(event)
 					{
