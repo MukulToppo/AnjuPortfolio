@@ -1,5 +1,18 @@
 
-.content
+/* Importing "Lato" font family */
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400);
+@-webkit-keyframes load {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes load {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.content  /* Cover section */
 {
   background-image: url(artist.jpg);
   width: 100%;
@@ -8,14 +21,14 @@
   color: white;
   font-family: calibri;
 }
-.content-overlay
+.content-overlay  /* Black overlay on the cover section */
 {
 width: 100%;
 height: 720px;
 background: black;
 opacity: .4;
 }
-.menu
+.menu   /* social account hider */
 {
   position: absolute;
   z-index: 3;
@@ -27,7 +40,7 @@ opacity: .4;
   height: 30px;
   width: 30px;
 }
-.social-container
+.social-container   /* social icons container */
 {
   display: flex;
   flex-wrap: wrap;
@@ -36,7 +49,7 @@ opacity: .4;
   right: 5%;
   top: 5%;
 }
-.social-icon
+.social-icon  /* all the social icons in the cover section */
 {
   margin-left: 15px;
   cursor: pointer;
@@ -63,13 +76,12 @@ fill: #ccc;
 {
   fill: #ccc;
 }
-.content-heading
+.content-heading    /* heading of the page with current value = "Anju Suman Lakra" */
 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  .height:  ;
   width: auto;
   text-align: center;
   color: white;
@@ -79,7 +91,7 @@ fill: #ccc;
   border-bottom: 5px solid white;
   background-attachment: fixed;
 }
-.reveal
+.reveal       /* click trigger to scroll to next section */
 {
   position: absolute;
   left: 50%;
@@ -115,7 +127,220 @@ fill: #ccc;
 }
 .About
 {
-  background-color: #FFF8E1;
   width: 100%;
-  height: 1600px;
+  padding-top: 5px;
+}
+.profile-picture
+{
+  background-color:  #181818 ;
+  background-image: url();
+  background-attachment: fixed;
+  height: 300px;
+  width: 300px;
+  margin: 55px auto 0px auto;
+  border-radius: 50%;
+  opacity:0;
+	transform:translateY(50px);
+	transition:all .3s ease-in-out;
+	overflow:hidden;
+}
+.showing
+{
+	opacity:1;
+	transform: translateY(0px);
+}
+.summary
+{
+  text-align: center;
+  font-family: calibri;
+  width: 100%;
+  margin: 0px auto;
+}
+.progress {   /* active Radial experience bar container */
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+}
+.progress>li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: black;
+  font-family: Lato;
+  font-weight: 300;
+  margin: 3rem;
+}
+.progress>li:before {
+  content: attr(data-name);
+  position: absolute;
+  width: 100%;
+  bottom: -2rem;
+  font-weight: 600;
+  color: #93A2AC;
+}
+.progress>li:after {
+  content: attr(data-percent);
+  position: absolute;
+  width: 100%;
+  top: 3.7rem;
+  left: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+.progress svg {
+  width: 10rem;
+  height: 10rem;
+}
+.progress svg:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.progress svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 25;
+  stroke-dasharray: 629;
+  stroke: #fff;
+  opacity: .8;
+  -webkit-animation: load 5s;
+  animation: load 5s;
+  animation-iteration-count: infinite;
+}
+.summary-2
+{
+  width: 100%;
+  background: url("La.jpg") repeat fixed center 0 rgba(10, 10, 10, 1);
+  font-family: 'Share Tech Mono', monospace, sans-serif;
+}
+.summary-2 ul
+{
+  max-width: 800px;
+  margin: 0px auto;
+  text-align: left;
+  color: #EED54B;
+  font-size: 18px;
+}
+.summary-2 h3
+{
+  color: #4bd5ee;
+  margin-bottom: 40px;
+  padding-top: 50px;
+  font-size: 25px;
+}
+.employer-container
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.employer-unit
+{
+  margin: 20px auto;
+  height: 100px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+.alexion
+{
+  background-image: url(employer/Alexion.png);
+}
+.accenture
+{
+  background-image: url(employer/Accenture.png);
+}
+.atos
+{
+  background-image: url(employer/AtosOrigin.png);
+}
+.JPMorgan
+{
+background-image: url(employer/JPMorgan.png);
+}
+.leadsoft
+{
+  background-image: url(employer/LeadSoft.png);
+}
+.client-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.client-unit
+{
+  border: 3px solid black;
+  margin: 20px auto;
+  padding: 0px 40px;
+  height: 100px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.location-container
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.location-unit
+{
+  margin: 20px auto;
+  height: 100px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.india
+{
+  background-image: url(flag/India.png);
+}
+.UK
+{
+  background-image: url(flag/UK.png);
+}
+.malaysia
+{
+  background-image: url(flag/Malaysia.jpg);
+}
+.chicago
+{
+  background-image: url(flag/Chicago.jpg);
+}
+.netherlands
+{
+  background-image: url(flag/Netherlands.jpg);
+}
+.germany
+{
+  background-image: url(flag/Germany.jpg);
+}
+.location-overlay
+{
+  height: 100%;
+	background:black;
+	text-align: center;
+	opacity:0;
+	transform:translateX(20px);
+	transition:all .2s ease-in-out;
+}
+.location-overlay strong
+{
+display:block;
+padding: 30px 10px;
+font-size:30px;
+color:white;
+font-weight:900;
+text-transform: uppercase;
+}
+.location-unit:hover .location-overlay
+{
+	opacity:0.7;
+	transform: translateX(0px);
 }
