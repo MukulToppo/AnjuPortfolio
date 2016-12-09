@@ -167,7 +167,8 @@ fill: #ccc;
   position: relative;
   text-align: center;
   color: black;
-  font-family: Lato;
+  .font-family: Lato;
+  font-family: Calibri	
   font-weight: 300;
   margin: 3rem;
 }
